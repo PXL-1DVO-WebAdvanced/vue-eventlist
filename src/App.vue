@@ -1,9 +1,22 @@
 <script>
+import NavBar from '@/components/NavBar.vue'
+
+export default {
+  data() {
+    return {
+      
+    }
+  },
+  components: {
+    NavBar
+  }
+}
 
 </script>
 
 <template>
+  <NavBar />
   <main>
-    <p>Let's get started!</p>
+    <RouterView />
   </main>
 </template>
