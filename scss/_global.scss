@@ -34,7 +34,7 @@ $text-font: 'Trebuchet MS';
     background-color: $secondary-color;
     color: $primary-color;
     border-radius: 0.25rem;
-    &hover{
+    &:hover{
         background-color: $tertiary-color;
     }
   }

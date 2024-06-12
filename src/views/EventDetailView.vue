@@ -3,16 +3,16 @@
       <form @submit.prevent="saveEvent()">
           <div class="form-group">
             <label for="dateInput">Date</label>
-            <input type="date" class="form-control" id="dateInput"   >
+            <input type="date" class="form-control" id="dateInput"  v-model="event.date" >
           </div>
           <div class="form-group mt-3">
             <label for="titleInput">title</label>
-            <input type="text" class="form-control form-control-lg" id="titleInput" v-model="this.event.title">
+            <input type="text" class="form-control form-control-lg" id="titleInput" v-model="event.title">
 
           </div>
           <div class="form-group mt-3">
             <label for="descriptionInput">Description</label>
-            <textarea class="form-control" id="descriptionInput" rows="3" ></textarea>
+            <textarea class="form-control" id="descriptionInput" rows="3" v-model="event.description" ></textarea>
           </div>
           <div class="form-group mt-3">
             <button type="submit" class="btn btn-primary">Save</button>
@@ -32,8 +32,7 @@
         },
         methods: {
             saveEvent() {
-                this.store.updateEvent(this.event)
-                this.$router.push({name: 'event-list'})
+                this.$router.back()
             }
       
         },
